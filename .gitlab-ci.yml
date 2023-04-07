@@ -34,7 +34,6 @@ docker_package:
 
 deploy_to_cluster:
   stage: deploy
-  needs: ["create_cluster"]
   image: mcr.microsoft.com/azure-cli
   script:
     - az login --service-principal -u $CLIENT_ID -p $CLIENT_SECRET --tenant $TENANT_ID
