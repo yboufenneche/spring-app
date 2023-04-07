@@ -23,6 +23,7 @@ maven_package:
 
 docker_package:
   stage: package
+  needs: ["maven_package"]
   image: docker:latest
   services:
     - docker:dind
