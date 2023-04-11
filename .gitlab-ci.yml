@@ -9,9 +9,6 @@ maven_build:
   stage: build
   image: maven:3.8.3-openjdk-17
   script: mvn compile
-  artifacts:
-    paths:
-      - target/*.jar
 
 maven_package:
   stage: package
